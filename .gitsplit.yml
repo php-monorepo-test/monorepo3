@@ -15,11 +15,11 @@ cache_url: "/cache/gitsplit"
 # List of splits.
 splits:
   - prefix: "src/SubPackage1"
-    target: "https://${SPLIT_TOKEN}@php-monorepo-test/repo3-pkg1.git"
+    target: "https://${GH_TOKEN}@php-monorepo-test/repo3-pkg1.git"
   - prefix: "src/NS/SubPackage2"
-    target: "https://${SPLIT_TOKEN}@php-monorepo-test/repo3-pkg2.git"
+    target: "https://${GH_TOKEN}@php-monorepo-test/repo3-pkg2.git"
   - prefix: "src/NS/SubPackage3"
-    target: "https://${SPLIT_TOKEN}@php-monorepo-test/repo3-pkg3.git"
+    target: "https://${GH_TOKEN}@php-monorepo-test/repo3-pkg3.git"
 
 # List of references to split (defined as regexp)
 origins:
