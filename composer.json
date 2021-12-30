@@ -1,15 +1,30 @@
 {
     "name": "example/monorepo1",
     "require": {
+        "psr/container": "^2.0.1",
+        "psr/log": "^3.0.0",
         "symfony/console": "^5.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpspec/prophecy": "^1.14.0",
+        "phpunit/php-file-iterator": "3.0.5",
+        "phpunit/phpunit": "^9.5",
+        "symplify/monorepo-builder": "^10.0",
+        "webmozart/assert": "^1.10.0"
     },
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Example\\Monorepo1\\": "src/"
+            "Example\\Monorepo1\\": "src/",
+            "Example\\Monorepo1\\NS\\SubPackage2\\": "src/NS/SubPackage2/",
+            "Example\\Monorepo1\\NS\\SubPackage3\\": "src/NS/SubPackage3/",
+            "Example\\Monorepo1\\SubPackage1\\": "src/SubPackage1/"
         }
+    },
+    "replace": {
+        "example/ns1": "0.0.2",
+        "example/subpackage1": "0.0.2",
+        "example/subpackage2": "0.0.2",
+        "example/subpackage3": "0.0.2"
     }
 }
