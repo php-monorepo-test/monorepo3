@@ -1,0 +1,33 @@
+# Path to a cache directory Used to speed up the split over time by reusing git's objects
+cache_url: "/cache/gitsplit"
+# cache_url: "file:///cache/gitsplit"
+# cache_url: "https://${GH_TOKEN}@github.com/my_company/project-cache.git"
+# cache_url: "git@gitlab.com:my_company/project-cache.git"
+
+# Path to the repository to split (default = current path)
+# project_url: /home/me/workspace/another_project
+# project_url: ~/workspace/another_project
+# project_url: ../another_project
+# project_url: file://~/workspace/another_project
+# project_url: "https://${GH_TOKEN}@github.com/my_company/project.git"
+# project_url: "git@gitlab.com:my_company/project.git"
+
+# List of splits.
+splits:
+  - prefix: "src/partA"
+    target: "https://${GH_TOKEN}@github.com/my_company/project-partA.git"
+  - prefix: "src/partB"
+    target:
+      # You can push the split to several repositories
+      - "https://${SPLIT_TOKEN}@github.com/my_company/project-partB.git"
+      - "https://${SPLIT_TOKEN}@github.com/my_company/project-partZ.git"
+  - prefix:
+      # You can use several prefix in the split
+      - "src/subTree/PartC:"
+      - "src/subTree/PartZ:lib/z"
+    target: "https://${SPLIT_TOKEN}@github.com/my_company/project-partC.git"
+
+# List of references to split (defined as regexp)
+origins:
+  - ^main$
+  - ^v\d+\.\d+\.\d+$
