@@ -22,9 +22,9 @@
         }
     },
     "replace": {
-        "example/ns1": "0.0.4",
-        "example/subpackage1": "0.0.4",
-        "example/subpackage2": "0.0.4",
-        "example/subpackage3": "0.0.4"
+        "example/ns1": "0.0.5",
+        "example/subpackage1": "0.0.5",
+        "example/subpackage2": "0.0.5",
+        "example/subpackage3": "0.0.5"
     }
 }
