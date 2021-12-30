@@ -23,9 +23,9 @@
         }
     },
     "replace": {
-        "example/ns1": "0.0.9",
-        "example/subpackage1": "0.0.9",
-        "example/subpackage2": "0.0.9",
-        "example/subpackage3": "0.0.9"
+        "example/ns1": "0.0.10",
+        "example/subpackage1": "0.0.10",
+        "example/subpackage2": "0.0.10",
+        "example/subpackage3": "0.0.10"
     }
 }
