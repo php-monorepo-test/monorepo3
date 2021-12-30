@@ -20,6 +20,8 @@ splits:
     target: "https://${GH_TOKEN}@github.com/php-monorepo-test/repo3-pkg2.git"
   - prefix: "src/NS/SubPackage3"
     target: "https://${GH_TOKEN}@github.com/php-monorepo-test/repo3-pkg3.git"
+  - prefix: "src/NS"
+    target: "https://${GH_TOKEN}@github.com/php-monorepo-test/repo3-multi1.git"
 
 # List of references to split (defined as regexp)
 origins:
