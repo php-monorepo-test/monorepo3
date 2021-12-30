@@ -21,6 +21,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         // default value
         __DIR__ . '/src',
     ]);
+    $parameters->set(Option::DEFAULT_BRANCH_NAME, [
+        'main',
+    ]);
     // for "merge" command
     $parameters->set(Option::DATA_TO_APPEND, [
         ComposerJsonSection::REQUIRE_DEV => [
