@@ -5,7 +5,7 @@ on:
       - main
   release:
     types: [published]
-  created:
+  create:
   workflow_dispatch:
 
 jobs:
